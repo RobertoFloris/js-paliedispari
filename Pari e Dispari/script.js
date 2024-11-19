@@ -14,13 +14,19 @@
  * Se la scelta dell'utente coincide con l'esito della funzione, lo dichiaro vincitore 
  */
 
-// const pariDispari = prompt("Inserisci la tua scelta. Pari o dispari?");
+let pariDispari="";
 
-// const numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+let numeroUtente=0;
 
-const pariDispari = "pari";
+let message;
 
-const numeroUtente = 5;
+while (pariDispari !== "pari" && pariDispari !== "dispari") {
+  pariDispari = prompt("Inserisci la tua scelta. Pari o dispari?").toLowerCase();
+}
+
+while (isNaN(numeroUtente) || (numeroUtente<1 || numeroUtente>5)){
+  numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
+}
 
 const numeroPc = randomNumber();
 
@@ -28,7 +34,9 @@ const somma = numeroUtente + numeroPc;
 
 sommaIsPari = isPari(somma);
 
-console.log(pariDispari, numeroUtente, numeroPc, somma, sommaIsPari)
+console.log(`La tua scelta è ${pariDispari}, e il numero che hai scelto è ${numeroUtente}. 
+  Il computer ha scelto ${numeroPc}
+  La loro somma è ${somma}`);
 
 if(pariDispari === "pari"){
 
