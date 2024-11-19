@@ -11,3 +11,27 @@
 
  * Se la scelta dell'utente coincide con l'esito della funzione, lo dichiaro vincitore 
  */
+
+const pariDispari = "pari";
+// const pariDispari = "dispari"; 
+const numeroUtente = 5;
+const numeroPc = randomNumber();
+
+console.log(numeroUtente);
+console.log(numeroPc);
+console.log(numeroPc + numeroUtente);
+console.log(isPari(numeroUtente, numeroPc));
+
+
+
+function randomNumber(){
+  return Math.floor(Math.random() * 5) + 1;
+}
+
+function isPari(num1, num2){
+  if( !((num1+num2) % 2) ){
+    return true;
+  } else {
+    return false;
+  }
+}
