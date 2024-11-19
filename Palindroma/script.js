@@ -13,3 +13,21 @@
 
  */
 
+const parola = prompt("Inserisci la parola");
+let message = "La parola inserita non è polindroma";
+
+if(isPalindroma (parola)){
+  message = "La parola inserita è polindroma"
+}
+
+console.log(message);
+
+function isPalindroma (word){
+  parolaInvertita= word.split("").reverse().join("")
+  if (word === parolaInvertita){
+    return true;
+  } else {
+    return false
+  }
+}
+
